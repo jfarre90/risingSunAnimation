@@ -1,0 +1,92 @@
+
+body {
+    /*<animation settings>*/
+    animation-name: skyAnimation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /*</animation settings>*/
+    
+    margin: 0 0 0 0;
+    background-color: #2c3e50;
+}
+
+.grass {
+    background: green;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+}
+
+.sun {
+     /*<animation settings>*/
+    animation-name: sunAnimation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /*</animation settings>*/
+    
+    position: relative;
+    background: #f1c40f;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 150px;
+}
+
+@keyframes skyAnimation {
+    0% {
+        background-color: #2c3e50; /*black sky*/
+    }
+    
+    10% {
+        background-color: #ff8cfd; /*pink sky*/
+    }
+    
+    30% {
+        background-color: #bde4fc; /*blue sky*/
+    }
+    
+    70% {
+        background-color: #bde4fc; /*blue sky*/
+    }
+    
+    90% {
+        background-color: #ff8cfd; /*pink sky*/
+    }
+    
+    100% {
+        background-color: #2c3e50; /*black sky*/
+    }
+}
+
+@keyframes sunAnimation {
+    0% {
+        background-color: #d23e04; /*red sun*/
+        left:0%;
+    }
+    
+    25% {
+        top: 75px;
+        left: 20%;
+    }
+    
+    50% {
+        top: 0px;
+        left: 40%;
+        background-color: #f6ff00; /*yellow sun*/
+    }
+    
+    75% {
+        
+        top: 75px;
+        left: 60%;
+    }
+    
+    100% {
+        top: 150px;
+        left: 80%;
+        background-color: #d23e04; /*red sun*/
+    }
+}
